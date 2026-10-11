@@ -5,7 +5,7 @@ description: Use when producing or editing a PDF report, paper or assignment in 
 
 # LaTeX reports
 
-Everything sits under `kit/` (the kit root).
+Everything sits under `kit/` (the kit root). **Read `kit/templates/report/README.md` first**: it defines the working tree every report uses and how its LaTeX is written.
 
 ## Start
 

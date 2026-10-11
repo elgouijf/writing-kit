@@ -8,7 +8,7 @@ A writing pipeline for Claude Code that makes deliverables read as a person wrot
 |---|---|
 | `skills/` | Four skills that load on demand: `writing`, `latex-report`, `explaining`, `course-book`. A session that never writes a report pays only their one-line descriptions. |
 | `rules/` | 181 rules in 13 modules, one line each in `rules/INDEX.md`. `profiles.md` sets the choices that differ by genre; `conflicts.md` shows how every contradiction between the sources was settled. |
-| `templates/report/` | LaTeX report (cover, abstract, contents, lists, chapters, references, glossary, appendices) and `short.tex` for one or two pages. |
+| `templates/report/` | The report working tree (cover, abstract, contents, lists, chapters, references, glossary, appendices) and `short.tex` for one or two pages; its `README.md` defines the tree and how the LaTeX is written. |
 | `templates/course-book/` | Course book: margin definitions of difficult terms, automatic glossary, definition/intuition/worked-example/trap boxes, formula sheet. |
 | `templates/profile.example.md` | Template for a private profile (identity, voice preferences, private sources) kept outside the repository. |
 | `tools/` | `check_style.py` (machine-writing patterns), `check_numbers.py` (every number traced to a source, or unchanged by a rewrite), `extract_annotations.py` (notes saved in a PDF), `body_pages.py` (page budget), `build_index.py`. |
@@ -19,14 +19,14 @@ A writing pipeline for Claude Code that makes deliverables read as a person wrot
 As a plugin, from Claude Code:
 
 ```text
-/plugin marketplace add <owner>/writing-kit
+/plugin marketplace add elgouijf/writing-kit
 /plugin install writing-kit@writing-kit
 ```
 
 Or locally, by linking the skills into your user skills folder:
 
 ```bash
-git clone https://github.com/<owner>/writing-kit ~/writing-kit
+git clone https://github.com/elgouijf/writing-kit ~/writing-kit
 mkdir -p ~/.claude/skills
 for s in writing latex-report explaining course-book; do ln -s ~/writing-kit/skills/$s ~/.claude/skills/$s; done
 ```
