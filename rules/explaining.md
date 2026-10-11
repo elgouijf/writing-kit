@@ -11,6 +11,7 @@ These rules govern what is written to **teach the user**, not what the user hand
 - **E7. Connect to what the reader already knows.** Attention is a search inside the sentence; retrieval-augmented generation is the search engine of an earlier week feeding the language model of a later one. (exp)
 - **E8. Mark everything that is not in the source.** "(added, not in the lecture)" on examples, a side note on added background, "illustrative values" in a caption. Never invent a number; recompute every worked number. (user)
 - **E9. Show the source when a claim depends on it.** When the user asks how a deliverable relates to its sources, give screenshots of the sources themselves and map each part of the text to the record it comes from. (user)
+- **E10. A course book is complete and as short as possible.** It covers every week from the first, keeps every definition, derivation, table and rule, and says each thing once: no restated boxes, recaps that repeat the chapter or padding around a formula. (user)
 
 ## Shape of an explanation
 

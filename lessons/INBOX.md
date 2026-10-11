@@ -14,6 +14,10 @@ Scope tags: `all`, `reports`, `coursework`, `academic-english`, `explaining`, `l
 
 ---
 
+## 2026-10-11 · explaining · promoted → E10
+Course books "should start from all of previous weeks" and stay "as short as possible without losing any of the important information".
+Every week from the first; complete content, each thing said once.
+
 ## 2026-10-11 · explaining · promoted → E1–E9
 Explanations showed a widget before explaining the mechanism, used terms such as n-gram or Transformer undefined, needed three attempts at a coefficient until formula, symbols and meaning were given in text, and kept the full content out of the user's reach.
 Build from zero, define every term, formula then meaning in words, text when text is asked for, complete content available.
