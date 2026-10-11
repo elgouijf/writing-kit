@@ -1,0 +1,26 @@
+% Course book. Build:  <kit>/templates/course-book/build.sh <path-to-this-folder>
+% The two \input paths below must reach the kit's course-book template.
+\documentclass[a4paper,11pt,oneside]{report}
+\input{../../templates/course-book/preamble}
+\input{metadata}
+\input{glossary}
+
+\begin{document}
+\input{../../templates/course-book/titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\input{chapters/week-01}
+
+\appendix
+\renewcommand{\chaptername}{Appendix}
+\titleformat{\chapter}[display]{\normalfont\bfseries\color{figdark}}
+  {\large\MakeUppercase{Appendix}~\thechapter}{4pt}{\LARGE}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\input{chapters/formula-sheet}
+
+\printnoidxglossary[sort=letter, title=Glossary]
+\end{document}

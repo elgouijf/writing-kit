@@ -1,0 +1,51 @@
+% Short report (one or two pages): no title page, no table of contents.
+% Same packages, layout and metadata as main.tex, with a compact header block.
+%
+% Build:  pdflatex short.tex  (twice)
+%
+% To use: copy this folder next to the project, fill config/metadata.tex, write
+% the text below, and delete main.tex, front/, frontmatter/, chapters/ and back/
+% if the long form is not needed. Rules: ../../rules/ (profile P2).
+
+\documentclass[a4paper,11pt]{article}
+
+\input{config/packages}
+\input{config/layout}
+\input{config/metadata}
+\usepackage{titlesec}
+
+\pagestyle{plain}
+\setlength{\parskip}{3pt}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+\renewcommand{\refname}{References}
+
+\begin{document}
+
+\begin{center}
+  {\large\bfseries \reporttitle}\\[3pt]
+  {\small \coursename{} (\coursecode), \lecturer{} \textbar{} \reportsubtitle}\\[2pt]
+  {\small \authorname\ifx\authorid\kitempty\else, \authorid\fi, \institution{} \textbar{} \reportdate}
+\end{center}
+\vspace{-4pt}
+
+\section{Introduction}
+Text.
+
+\section{Body}
+Text.
+
+\section{Conclusion}
+Text.
+
+% Required by some courses and journals: which generative-AI service was used,
+% where, and how. Delete if the context has no such rule.
+\section*{Use of generative AI}
+\tofill{Service or model, the parts where it was used, and how it was used.}
+
+{\small
+\begin{thebibliography}{9}\setlength{\itemsep}{0pt}
+\bibitem{example}
+Author. \emph{Title}. Publisher or URL, year.
+\end{thebibliography}}
+
+\end{document}

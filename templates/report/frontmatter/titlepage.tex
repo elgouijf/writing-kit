@@ -1,0 +1,30 @@
+% Cover page. Reads config/metadata.tex. A school that prescribes cover items
+% (author, host organisation and address, supervisors, dates, duration, subject)
+% gets one line per item here; check each against the official document.
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+
+{\large\textbf{\MakeUppercase{\institution}}\par}
+\vspace{0.2cm}
+\rule{3cm}{0.3pt}\par
+\vspace{0.2cm}
+\ifx\coursecode\kitempty\else\coursecode\ -- \fi\coursename\par
+
+\vspace{2.5cm}
+
+{\LARGE\textbf{\reporttitle}\par}
+\vspace{0.4cm}
+{\large\reportsubtitle\par}
+
+\vfill
+
+\begin{tabular}{rl}
+\textbf{Author}     & \authorname\ifx\authorid\kitempty\else\ (\authorid)\fi \\
+                    & \homeinstitution \\[4pt]
+\textbf{Supervisor} & \lecturer \\[4pt]
+\textbf{Date}       & \reportdate \\
+\end{tabular}
+
+\vspace{1.5cm}
+\end{titlepage}

@@ -1,0 +1,152 @@
+% Course book preamble, shared by every course book built from this kit.
+% Editing this file restyles every course book at once.
+% Rules for the content: ../../rules/explaining.md. Usage: README.md next to this file.
+%
+% Look: the internship report (Computer Modern, figure palette, black-outlined
+% TikZ), plus a wide right margin that carries the definition of each difficult
+% term next to the line where it first appears.
+
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{microtype}
+
+% Page: 12.4 cm of text, 4.6 cm of margin notes on the right of every page
+\usepackage{geometry}
+\geometry{a4paper, left=2cm, textwidth=12.4cm, marginparsep=0.5cm,
+  marginparwidth=4.6cm, top=2.5cm, bottom=2.5cm, headheight=14pt}
+\usepackage{marginfix}          % margin notes never get lost or overlap
+\usepackage{changepage}         % wide figures that run into the margin
+\setlength{\parskip}{3pt}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Figures and tables
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{enumitem}
+\setlist{itemsep=1pt,topsep=3pt}
+\renewcommand{\arraystretch}{1.15}
+
+% Diagrams and plots
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds,shapes.geometric,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+% Figure palette of the internship report: each colour has its own luminance,
+% so fills stay distinct in a greyscale print. No yellow.
+\definecolor{figdark}{HTML}{1F4E79}
+\definecolor{figblue}{HTML}{2E75B6}
+\definecolor{figmid}{HTML}{2E8B8B}
+\definecolor{figsoft}{HTML}{7FB3D5}
+\definecolor{figlight}{HTML}{A9CCE3}
+\definecolor{figpale}{HTML}{CFE2F0}
+\definecolor{figbg}{HTML}{E6F0F8}
+\definecolor{sevone}{HTML}{FCE9E3}
+\definecolor{sevtwo}{HTML}{F3B3A0}
+\definecolor{sevthree}{HTML}{D9604A}
+\definecolor{sevfour}{HTML}{8E1B12}
+
+% Shared TikZ styles: a box, a highlighted box, an arrow, a dashed group
+\tikzset{
+  bx/.style={draw=black, fill=figbg, rounded corners=1.5pt, align=center,
+    font=\footnotesize, inner sep=4pt, minimum height=8mm},
+  bxhi/.style={bx, fill=figpale},
+  bxdark/.style={bx, fill=figdark, text=white},
+  bxwarn/.style={bx, fill=sevone},
+  ar/.style={-{Stealth[length=2mm]}, thick},
+  grp/.style={draw=black!50, dashed, rounded corners=3pt, inner sep=6pt},
+  lbl/.style={font=\scriptsize, text=black!70},
+}
+
+% Headings and running heads
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\color{figdark}}
+  {\large\MakeUppercase{Week}~\thechapter}{4pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{-10pt}{14pt}
+\titleformat{\section}{\normalfont\large\bfseries\color{figdark}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\renewcommand{\chaptername}{Week}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset[R]{5.1cm}      % the header spans the margin column too
+\fancyfootoffset[R]{5.1cm}
+\fancyhead[L]{\small\itshape\coursename}
+\fancyhead[R]{\small\itshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{Week~\thechapter: #1}{}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% Boxes
+\usepackage[most]{tcolorbox}
+\tcbset{bookbox/.style={enhanced, breakable, boxrule=0.5pt, arc=1.5pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt, fonttitle=\bfseries\small,
+  before skip=8pt, after skip=8pt}}
+% A definition or a formula to know
+\newtcolorbox{definition}[1]{bookbox, colback=figbg, colframe=figdark,
+  title={#1}}
+% Intuition first: an analogy or the plain-words idea behind a mechanism
+\newtcolorbox{intuition}[1][Intuition]{bookbox, colback=white, colframe=figmid,
+  title={#1}}
+% A worked example; say in the title when it is not from the lecture
+\newtcolorbox{worked}[1]{bookbox, colback=white, colframe=figblue,
+  title={Worked example: #1}}
+% Exam traps and common confusions
+\newtcolorbox{traps}[1][Exam traps]{bookbox, colback=sevone, colframe=sevthree,
+  title={#1}}
+% The end-of-week recap
+\newtcolorbox{recap}[1][The week in short]{bookbox, colback=figpale!45,
+  colframe=figdark, title={#1}}
+% The card at the top of each week: source, lecturer, assignment verdict
+\newtcolorbox{lecturecard}{bookbox, colback=black!3, colframe=black!45,
+  fontupper=\small}
+% Empty-field test: \newcommand macros are \long, so compare with one of them.
+\newcommand{\kitempty}{}
+\newcommand{\addedtag}{\ (added, not in the lecture)}
+
+% Links, then the glossary (glossaries must come after hyperref)
+\usepackage[hidelinks]{hyperref}
+\usepackage[toc, nopostdot, nogroupskip]{glossaries}
+\makenoidxglossaries
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+
+% \defterm{key}{Name}{Definition, one or two short sentences.}
+% Declare every term in the course's glossary.tex.
+\newcommand{\defterm}[3]{\newglossaryentry{#1}{name={#2}, description={#3}}}
+
+% \term{key} or \term[shown text]{key}: the first time a difficult term
+% appears in running text. Prints it in bold, puts its definition in the
+% margin next to the line and lists the page in the glossary.
+% Use it in plain paragraphs only: a margin note cannot leave a box, a table
+% or a figure. Inside those, use \gls{key} (no margin note).
+\newcommand{\term}[2][]{%
+  \textbf{\ifx&#1&\glsentryname{#2}\else#1\fi}\glsadd{#2}%
+  \marginpar{\raggedright\footnotesize\textbf{\glsentryname{#2}.}\ \glsentrydesc{#2}}}
+
+% A plain margin remark (a cross-reference, a date, a warning)
+\newcommand{\sidenote}[1]{\marginpar{\raggedright\footnotesize\itshape #1}}
+
+% Wide figure: runs into the margin column. Use inside a figure environment.
+\newenvironment{wide}{\begin{adjustwidth}{0pt}{-5.1cm}\centering}{\end{adjustwidth}}
+
+% Cross-references printed in bold
+\newcommand{\figref}[1]{\textbf{Figure~\ref{#1}}}
+\newcommand{\tabref}[1]{\textbf{Table~\ref{#1}}}
+\newcommand{\secref}[1]{\S\ref{#1}}

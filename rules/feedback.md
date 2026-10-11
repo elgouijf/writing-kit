@@ -1,0 +1,18 @@
+# F. Working with the author's notes and reviews
+
+- **F1. Every modification follows the rules that apply to it.** However small the change, read the index first and check the result against the matching rules, without being reminded. (user)
+- **F2. A note on one passage is a rule for the whole text.** "Remove this" on one sentence also applies to the same claim in the abstract, the conclusion, the tables, the glossary and the bibliography. After every removal, grep for the claim, its number and its label everywhere. (user)
+- **F3. Apply every note, and say where you did not follow one literally.** When a note contradicts the sources, apply it in the form the sources support and explain why in the reply. (user)
+- **F4. Report deviations and open questions in the reply, never silently.** A verdict changed, a sentence deleted because what it pointed to was deleted, a claim written as the author stated it because no source confirms it: each goes in the reply. (user)
+- **F5. When the author writes the sentence, use it.** Fix only spelling and grammar, in the document's spelling convention. Say which part of the text a proposal is about when it could be read against another part. (user)
+- **F6. A fix that breaks the logic or exposes a weakness is not applied.** Every correction must read more naturally than the sentence it replaces; one that trades a flaw for another keeps the original. (user)
+- **F7. Leave alone what the author calls a technicality.** (user)
+- **F8. Learn the author's shorthand.** "(after corrections of course)" at the end of a note means "polish my wording". When a reviewer and the author read a note differently, the sources decide. (user)
+- **F9. An ambiguous reference means the part under review.** "The first section" is the first part of what the current notes are about, not the first section of the file. (user)
+- **F10. When the author says stop, stop.** Record the pending corrections as find/replace pairs with the source of each, so they can be reapplied against whatever the author changes meanwhile. (user)
+- **F11. Annotated PDFs: extract before any rebuild.** Highlights and notes saved inside a PDF are invisible until extracted and are destroyed by the next build. Copy the file aside, run `tools/extract_annotations.py`, build to another name (`pdflatex -jobname=main_build`), and check for new annotations before every build, not once per session. (exp)
+- **F12. Work in a copy when the author wants to compare.** `main_copyN.tex` with a `copyN/` tree, built separately; promote to the main version only when asked, after backing it up. (user)
+- **F13. A reviewer's list is a hypothesis, not a verdict.** Judge each point against the rules and the wordings the author has approved, apply what holds, and say which points were refused and why. Check a reviewer's rewrite against the source like any other sentence. (review)
+- **F14. An author's deliberate cut outranks a reviewer who never heard the reason.** A reviewer without the conversation asks to restore what the author removed on purpose; it stays out. (user)
+- **F15. A supervisor's wording gives the direction, not the final text.** Feedback given orally or in a second language is corrected before it goes in, without swinging back into abstraction. (review)
+- **F16. Record every general correction for the next project.** Append it to `lessons/INBOX.md` at once and promote it into a module when it is general (see `CONTRIBUTING.md`). (user)

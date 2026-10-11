@@ -1,0 +1,70 @@
+% Margins and spacing
+\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm}
+\singlespacing
+
+% Sections numbered 1, 1.1 (no chapters in a short report)
+\renewcommand{\thesection}{\arabic{section}}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
+
+% Code listings
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    showstringspaces=false,
+    tabsize=2
+}
+
+% Captions
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+\renewcommand{\arraystretch}{1.15}
+
+% Figure palette: each colour has its own luminance (value at the end of the
+% line) so that fills stay distinct in a greyscale print. No yellow.
+\definecolor{figdark}{HTML}{1F4E79}   % 0.27
+\definecolor{figblue}{HTML}{2E75B6}   % 0.41
+\definecolor{figmid}{HTML}{2E8B8B}    % 0.50
+\definecolor{figsoft}{HTML}{7FB3D5}   % 0.65
+\definecolor{figlight}{HTML}{A9CCE3}  % 0.77
+\definecolor{figpale}{HTML}{CFE2F0}   % 0.87
+\definecolor{figbg}{HTML}{E6F0F8}     % 0.93
+% A severity or risk scale runs through one hue
+\definecolor{sevone}{HTML}{FCE9E3}    % 0.92
+\definecolor{sevtwo}{HTML}{F3B3A0}    % 0.76
+\definecolor{sevthree}{HTML}{D9604A}  % 0.53
+\definecolor{sevfour}{HTML}{8E1B12}   % 0.24
+\definecolor{figbgx}{HTML}{F3F8FC}    % 0.97
+
+% Empty-field test: \newcommand macros are \long, so compare with one of them.
+\newcommand{\kitempty}{}
+
+% Optional watermark, set in config/metadata.tex (\watermarkimage).
+\AtBeginDocument{%
+\ifx\watermarkimage\kitempty%
+  \backgroundsetup{contents={}}%
+\else%
+  \backgroundsetup{scale=1, color=black, opacity=0.04, angle=0,%
+    position=current page.center, vshift=0cm, hshift=0cm,%
+    contents={\includegraphics[width=0.34\paperwidth]{\watermarkimage}}}%
+\fi}
+
+% Glossary without an external tool (rule R8): in the text \gterm{key}{Term},
+% in back/glossary.tex \gdefn{key}{Term}{definition}.
+\newcommand{\gterm}[2]{\hyperlink{gls:#1}{#2}}
+\newcommand{\gdefn}[3]{\hypertarget{gls:#1}{}\item[#2] #3}
+
+% One of the two or three statements the document stands on.
+\newcommand{\keyclaim}[1]{%
+  \par\medskip\noindent
+  \fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{2pt}\itshape #1\vspace{2pt}\end{minipage}}\par\medskip}
+
+% A gap only the author can fill (rule V13). Printed, never hidden.
+\newcommand{\tofill}[1]{%
+  \par\medskip\noindent
+  \fbox{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+  \vspace{2pt}\small\textbf{To be supplied by the author.} #1\vspace{2pt}
+  \end{minipage}}\par\medskip}

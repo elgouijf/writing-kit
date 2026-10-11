@@ -1,0 +1,21 @@
+% Body: one section per part of the assignment. Titles are noun phrases.
+% Every figure and table is captioned and cited with \figref / \tabref.
+
+\section{Main section title}
+\label{sec:body}
+
+Body text. \tabref{tab:example} shows the expected form of a results table.
+
+\begin{table}[H]
+\centering
+\caption[Example table]{Example table}
+\label{tab:example}
+\begin{tabular}{lrr}
+\toprule
+Method & Metric A & Metric B \\
+\midrule
+Baseline & 0.00 & 0.00 \\
+Proposed & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

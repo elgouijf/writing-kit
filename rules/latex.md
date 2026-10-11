@@ -1,0 +1,18 @@
+# X. LaTeX build and editing pitfalls
+
+- **X1. Never edit LaTeX through Bash heredocs or `sed`.** They silently mangle backslashes (`\node` becomes a newline and `ode`). Use an exact-match editor, or write a Python script to a file with raw strings (`r'...'`) and run it by path. (exp)
+- **X2. `re.sub` with a string replacement turns `\t`, `\f`, `\a` into control characters.** Pass a function: `re.sub(p, lambda m: new, s)`. (exp)
+- **X3. Replace a passage the author may have re-wrapped with a whitespace-tolerant pattern** (`\s+` between tokens) that fails loudly when nothing matches. (exp)
+- **X4. Build twice (three times with a glossary).** A delivery is clean only at 0 errors, 0 undefined references and 0 overfull boxes. (exp)
+- **X5. Look at the rendered pages, not only the log.** Margin collisions, a long equation running into a margin column and a figure overlapping text do not show in the log: render with `pdftoppm -r 60` and look. (exp)
+- **X6. A longer TikZ label widens the picture**; check for overfull boxes after every label change. (exp)
+- **X7. Anchor a logo to its node** (`\node[anchor=south] at (n.north)`), never at fixed coordinates above it. (exp)
+- **X8. Typewriter text cannot hyphenate in fixed-width nodes**: shorten it or widen the node; use `align=flush left` in narrow boxes. (exp)
+- **X9. Do not name TikZ styles `step`, `out`, `grid` or `scale`**: they shadow built-in keys. (exp)
+- **X10. Precompute centimetres instead of large integers in TikZ coordinates** (`! Dimension too large`). (exp)
+- **X11. Wrap comma-containing labels in braces inside `\foreach` lists**, or the commas split the items. (exp)
+- **X12. `microtype` needs `lmodern`** (font-expansion error otherwise); `\boldsymbol` needs `amsmath`. (exp)
+- **X13. A margin note (`\marginpar`) cannot sit inside a box, a float or a table.** Use the non-margin form there. (exp)
+- **X14. Keep figures under version control**: never gitignore `*.pdf` wholesale when some figures are PDFs; mark them binary in `.gitattributes`. (exp)
+- **X15. Convert SVG logos with `svglib` and `reportlab`** when `cairosvg` cannot find its library. (exp)
+- **X16. Keep the layout the author supplied or approved.** A redesigned draft was rejected; a reference report's class, size, margins and single column are reused as they are. (user)

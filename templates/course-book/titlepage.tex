@@ -1,0 +1,36 @@
+% Course book title page. Reads the macros of the course's metadata.tex:
+% \institution \coursecode \semester \coursename \coverage \lecturers
+% \authorname \authorid \homeinstitution \updated
+\begin{titlepage}
+\thispagestyle{empty}
+\newgeometry{left=2.5cm,right=2.5cm,top=3cm,bottom=3cm}
+\centering
+
+{\large\textbf{\MakeUppercase{\institution}}\par}
+\vspace{0.2cm}
+{\color{figdark}\rule{3cm}{0.6pt}}\par
+\vspace{0.2cm}
+\coursecode\ -- \semester\par
+
+\vspace{3cm}
+
+{\Huge\bfseries\color{figdark}\coursename\par}
+\vspace{0.5cm}
+{\Large Course book\par}
+\vspace{0.3cm}
+{\large\coverage\par}
+
+\vfill
+
+\begin{tabular}{rl}
+\textbf{Lecturers} & \lecturers \\[4pt]
+\textbf{Student}   & \authorname\ifx\authorid\kitempty\else\ (\authorid)\fi \\
+                   & \homeinstitution \\[4pt]
+\textbf{Updated}   & \updated \\
+\end{tabular}
+
+\vspace{1cm}
+{\small\color{black!60}Definitions of difficult terms sit in the right margin
+where each term first appears, and in the glossary at the end.\par}
+\restoregeometry
+\end{titlepage}

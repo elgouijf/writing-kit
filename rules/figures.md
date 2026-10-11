@@ -1,0 +1,16 @@
+# G. Figures and tables
+
+- **G1. Every topic shows its mechanism.** A pipeline figure for each system, a figure for a design decision (a storage tree, a concurrency diagram), dense numbers in a table. (user)
+- **G2. Every figure and table is captioned and cited in the text**, with bold cross-references (`\figref`, `\tabref`, `\appref`). Each diagram is commented in the text and genuinely aids understanding; no illustration bloat. (school, user)
+- **G3. A pipeline figure names the model or tool at each stage, and the text names it first**, before any table compares it with another. (user)
+- **G4. A diagram of something not deployed says so in its caption.** (user)
+- **G5. Screenshots are readable on paper**: two per row at most for phone screens, one per row for dense tables and chats. Mask personal names, customers and prices; show a working example, not only a failure; use demonstration data where real data is sensitive. Prefer minimal crops of the important content. (user)
+- **G6. Colour survives a greyscale print.** Give each palette colour its own luminance (the kit palette: 0.27 navy, 0.41 blue, 0.50 teal, 0.65–0.93 light blues) and no yellow. Check by rendering the page in greyscale, not by reading hex values. (user)
+- **G7. A colour carries a meaning, consistent per entity.** One colour per model or product in a comparison; reserve a vivid colour for the entities whose brand it is, and do not paint a page with a colour that means nothing. (user)
+- **G8. Two adjacent bars need clearly different greys**; a pale band next to a dark bar becomes solid with an outline. (user)
+- **G9. A severity or risk scale runs through one hue**, from pale to dark (0.92, 0.76, 0.53, 0.24 in grey), white text on the darkest. (user)
+- **G10. Logos keep their brand colours**; black where the brand is black or too pale to print. Get them from `cdn.jsdelivr.net/npm/simple-icons`. (user)
+- **G11. Prefer drawn bars on a linear scale**: a log axis flatters the losing quantity. Use a log axis only when the values span orders of magnitude and say so in the caption. (exp)
+- **G12. Placement.** Pin each float with `[H]` right after the paragraph that first cites it; keep citations in numeric order inside a paragraph; check every float against the page of its first citation. (user)
+- **G13. A float that leaves a hole moves after the next paragraph, or splits** (two small figures side by side in minipages). Work backwards from the hole nearest the lost page, one change per build. (exp)
+- **G14. A wide table shrinks `\tabcolsep` and its headers before its font.** (exp)

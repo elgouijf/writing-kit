@@ -1,0 +1,7 @@
+{
+  "name": "writing-kit",
+  "version": "1.0.0",
+  "description": "Write deliverables that read as a person wrote them, build clean LaTeX reports, explain course material from the ground up, and keep complete course books. Rules load on demand through skills.",
+  "license": "MIT",
+  "keywords": ["writing", "style", "latex", "report", "course", "teaching"]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "writing-kit",
+  "owner": { "name": "writing-kit contributors" },
+  "plugins": [
+    {
+      "name": "writing-kit",
+      "source": "./",
+      "description": "Writing rules, LaTeX report and course-book templates, and check scripts, loaded on demand through four skills."
+    }
+  ]
+}

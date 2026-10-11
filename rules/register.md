@@ -1,0 +1,18 @@
+# R. Register: a person explaining what they understood
+
+- **R1. Write like a research paper, not like an AI.** Standard academic or professional English with ordinary connectives (*therefore*, *whereas*, *in addition*). A supervisor rejected a report because it "looks generated", and pointed to three signs: aphoristic bold lead-ins, compressed formulas and colon chains, and sentences no researcher would write. (review)
+- **R2. Professional and simple, never poetic.** No flourishes, no examples added for colour, no caption opening with "what to look for is…". (user)
+- **R3. Lead with the concrete.** Write as an engineer reporting to another engineer who was not there: a number, a failure or a decision first, then the explanation. (review)
+- **R4. Explain why a choice was made, including what it cost.** Every real decision has a price. (review)
+- **R5. Name things.** The service, the version, the exact figure, the actual file: never "the platform" or "the cloud provider". Name the department or group that acts, not "the business": its full name at first mention, "the department" after. (user)
+- **R6. State the content, never report on the source.** Write the idea itself, not "The lecture describes…", "The article insists that…", "The author's central question is…". Cite the source with a reference instead. (user)
+- **R7. Describe sources by what they are.** "All the data comes from open public sources, each serving a different purpose, as listed in Table 2", not "public sources that each answer a different question". (user)
+- **R8. Explain what a lay reader needs, where the reader needs it.** Define each acronym and each metric at first use or in a glossary; no bare list of tools; replace jargon labels with telling ones ("strict bound" became "exact form only"); give p-values instead of significance stars. (school, user)
+- **R9. Define a working term where the reader first meets it, and show a real instance.** A figure with a real excerpt beats an abstract definition; choose an excerpt that illustrates a point already in the text and carries no confidential data. (user)
+- **R10. Leave out detail nobody asked for.** A true number that serves no argument of its paragraph is noise ("no one asked"). (user)
+- **R11. Keep technical detail proportionate.** A guard described by its SQL keywords is too much for the body; say what it does in one sentence and send the mechanism to an appendix. (user)
+- **R12. Choose the exact word.** Vague or approximate wording is a defect. A verb matches what happened: "refused" is for a guard that rejects something, while a design choice "puts aside" an option. (school, user)
+- **R13. One name per thing, everywhere, and two names for two things.** Grep every synonym after a rewrite. (user)
+- **R14. Call people by their role in plain words**, and keep a legal term where it is one (a contract party stays "sales representative"). (user)
+- **R15. Formal documents write surnames in capitals** (Jane DOE), checked against an official source such as the internship agreement. (user)
+- **R16. Do not mention the tooling of the writing.** No commit counts, no "according to the git log": the author writes from memory. (user)

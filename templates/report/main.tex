@@ -1,0 +1,49 @@
+% Report template: report class, 12 pt, 2 cm margins, one column, Computer Modern.
+% Profiles P1 (long report) and P2 (short: use short.tex). Rules: ../../rules/.
+%
+% Build:  pdflatex main.tex   (twice: contents, lists and glossary links)
+%
+% To use: copy this folder next to the project, fill config/metadata.tex, write the
+% chapters, and delete what the document does not need (abstract, lists, glossary,
+% appendices) together with its \input line.
+
+\documentclass[a4paper,12pt]{report}
+
+\input{config/packages}
+\input{config/layout}
+\input{config/metadata}
+
+\begin{document}
+
+\input{frontmatter/titlepage}
+
+\pagenumbering{roman}
+\input{front/abstract}
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+\clearpage
+
+% Body. Under a page budget, the body ends where References starts
+% (python3 ../../tools/body_pages.py main.pdf).
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/01-introduction}
+\input{chapters/02-body}
+\input{chapters/03-conclusion}
+
+\clearpage
+\input{back/bibliography}
+
+% Appendices sit outside the page budget. The glossary is reference material.
+\clearpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0}
+\input{back/glossary}
+\input{back/appendices}
+
+\end{document}

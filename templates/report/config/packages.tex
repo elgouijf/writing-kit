@@ -1,0 +1,48 @@
+% Encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}            % required by microtype's font expansion
+\usepackage[english]{babel}
+\usepackage{microtype}
+
+% Links
+\usepackage[hidelinks]{hyperref}
+
+% Images and watermark
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{background}
+
+% Page layout
+\usepackage{geometry}
+\usepackage{setspace}
+
+% Mathematics
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Figures and tables
+\usepackage{float}              % [H] pins a float after the paragraph that cites it
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+% Diagrams
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% Misc
+\usepackage{xcolor}
+\usepackage{listings}
+
+% Cross-references printed in bold
+\newcommand{\figref}[1]{\textbf{Figure~\ref{#1}}}
+\newcommand{\tabref}[1]{\textbf{Table~\ref{#1}}}
+\newcommand{\appref}[1]{\textbf{Appendix~\ref{#1}}}
