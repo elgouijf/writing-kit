@@ -29,3 +29,7 @@ State content directly, one example per point, synthesis, connected reasoning, n
 ## 2026-10-14 · course book · promoted → X5
 A plain `tabular` (isolation-level table) ran under the margin glossary notes; the build had been delivered with 3 overfull boxes left.
 Size every course-book table with `tabularx` at `\linewidth`, and deliver only at 0 overfull boxes (X4).
+
+## 2026-10-14 · explanation · promoted → E11
+A tree / fat-tree explanation drew the networks as ASCII art in code blocks; the user rejected them and asked for real graphs.
+Draw a structure (network, tree, pipeline, memory layout) as a rendered figure: SVG widget in chat, TikZ in a course book. Never ASCII art.
