@@ -4,7 +4,7 @@
 - **X2. `re.sub` with a string replacement turns `\t`, `\f`, `\a` into control characters.** Pass a function: `re.sub(p, lambda m: new, s)`. (exp)
 - **X3. Replace a passage the author may have re-wrapped with a whitespace-tolerant pattern** (`\s+` between tokens) that fails loudly when nothing matches. (exp)
 - **X4. Build twice (three times with a glossary).** A delivery is clean only at 0 errors, 0 undefined references and 0 overfull boxes. (exp)
-- **X5. Look at the rendered pages, not only the log.** Margin collisions, a long equation running into a margin column and a figure overlapping text do not show in the log: render with `pdftoppm -r 60` and look. (exp)
+- **X5. Look at the rendered pages, not only the log.** Margin collisions, a long equation or a plain `tabular` running into a margin column (use `tabularx` at `\linewidth`) and a figure overlapping text do not always show in the log: render with `pdftoppm -r 60` and look. (exp)
 - **X6. A longer TikZ label widens the picture**; check for overfull boxes after every label change. (exp)
 - **X7. Anchor a logo to its node** (`\node[anchor=south] at (n.north)`), never at fixed coordinates above it. (exp)
 - **X8. Typewriter text cannot hyphenate in fixed-width nodes**: shorten it or widen the node; use `align=flush left` in narrow boxes. (exp)

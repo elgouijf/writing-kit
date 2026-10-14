@@ -25,3 +25,7 @@ Build from zero, define every term, formula then meaning in words, text when tex
 ## 2026-10-09 · coursework · promoted → R6, O4, O5, W11, S11, W12, T1, T5, P2, P3, C4
 Lecture summaries that passed every automatic scan were rejected as "AI slop"; a report draft used the first person and question headings.
 State content directly, one example per point, synthesis, connected reasoning, noun-phrase headings, impersonal voice; scans are not enough.
+
+## 2026-10-14 · course book · promoted → X5
+A plain `tabular` (isolation-level table) ran under the margin glossary notes; the build had been delivered with 3 overfull boxes left.
+Size every course-book table with `tabularx` at `\linewidth`, and deliver only at 0 overfull boxes (X4).
