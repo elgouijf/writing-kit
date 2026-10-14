@@ -13,6 +13,8 @@ These rules govern what is written to **teach the user**, not what the user hand
 - **E9. Show the source when a claim depends on it.** When the user asks how a deliverable relates to its sources, give screenshots of the sources themselves and map each part of the text to the record it comes from. (user)
 - **E10. A course book is complete and as short as possible.** It covers every week from the first, keeps every definition, derivation, table and rule, and says each thing once: no restated boxes, recaps that repeat the chapter or padding around a formula. (user)
 - **E11. Draw structures as real figures, never ASCII art.** A network, a tree, a pipeline or a memory layout gets a rendered diagram (an SVG widget in chat, TikZ in a course book), with the explaining sentences still in text (E4). ASCII drawings of a tree and a fat tree were rejected. (user)
+- **E12. A course book stands on its own.** It presents the source in full (schemas, data, examples, rules) so the reader never needs the slides: no "(slide 10)", no "see the slide", no slide numbers as references. Attribute in words when it matters ("the lecture's example"); the source file is named once, in the lecture card. A chapter citing a slide in nearly every paragraph was rejected. (user)
+- **E13. Every mechanism gets a figure that explains better than the source's.** A storage structure, an algorithm, a protocol or a timeline is drawn on a small concrete instance with real values and the path of one operation (a hash file with its keys and an overflow page, a join with the comparisons it makes, a log with what is redone). A table or a sentence alone was rejected where a figure fits. (user)
 
 ## Shape of an explanation
 
@@ -26,7 +28,7 @@ These rules govern what is written to **teach the user**, not what the user hand
 
 ## Course book (template `templates/course-book/`)
 
-- One cumulative, complete book per course, one chapter per week; definitions in the margin column (`\term{key}`), declared once in the course's `glossary.tex`.
+- One cumulative, complete, self-sufficient book per course (E12), one chapter per week, a figure per mechanism (E13); definitions in the margin column (`\term{key}`), declared once in the course's `glossary.tex`.
 - Boxes: `definition` (formula or rule to know), `intuition` (analogy), `worked` (example, `\addedtag` when added), `traps`, `recap`, `lecturecard` (source, lecturer, assignment verdict).
 - `\term` only in running paragraphs (X13); `\gls{key}` inside boxes, tables and figures.
 - Figures within the text width; split long equations with `align*`; render and look at every new page (X5).

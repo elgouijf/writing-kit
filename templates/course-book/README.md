@@ -23,7 +23,7 @@ Then fix the two `\input` paths at the top of `main.tex` so they reach `preamble
 
 ## Add a week
 
-1. Write `chapters/week-NN.tex`: `\chapter{Title}`, a `lecturecard` (source, lecturer, assignment verdict), a roadmap `recap`, one section per lecture section (intuition, construction, formula, lecture example), a closing `recap`, likely exam questions and `traps`.
+1. Write `chapters/week-NN.tex`: `\chapter{Title}`, a `lecturecard` (source, lecturer, assignment verdict), a roadmap `recap`, one section per lecture section (intuition, construction, formula, lecture example, a TikZ figure for each mechanism), self-sufficient: no slide numbers or "see the slide" (rules E12, E13), a closing `recap`, likely exam questions and `traps`.
 2. Declare the week's new terms in `glossary.tex`; use `\term{key}` at first use in running text.
 3. Add `\input{chapters/week-NN}` to `main.tex`, extend the formula sheet, update `\coverage` and `\updated`.
 4. Build and look at every new page (rule X5):

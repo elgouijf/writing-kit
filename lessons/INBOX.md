@@ -33,3 +33,7 @@ Size every course-book table with `tabularx` at `\linewidth`, and deliver only a
 ## 2026-10-14 · explanation · promoted → E11
 A tree / fat-tree explanation drew the networks as ASCII art in code blocks; the user rejected them and asked for real graphs.
 Draw a structure (network, tree, pipeline, memory layout) as a rendered figure: SVG widget in chat, TikZ in a course book. Never ASCII art.
+
+## 2026-10-14 · course book · promoted → E12, E13
+A chapter pointed to the slides in nearly every paragraph ("(slide 10)") and explained a hash file, joins and recovery with text and tables only.
+A course book replaces the slides: present every example in full, never refer the reader to a slide, and draw each mechanism on a small concrete instance.
