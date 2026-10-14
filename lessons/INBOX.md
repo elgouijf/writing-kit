@@ -37,3 +37,7 @@ Draw a structure (network, tree, pipeline, memory layout) as a rendered figure: 
 ## 2026-10-14 · course book · promoted → E12, E13
 A chapter pointed to the slides in nearly every paragraph ("(slide 10)") and explained a hash file, joins and recovery with text and tables only.
 A course book replaces the slides: present every example in full, never refer the reader to a slide, and draw each mechanism on a small concrete instance.
+
+## 2026-10-14 · course book · promoted → E14
+Push-down was defined by its purpose ("move selections close to the table"); the reader could not apply it and did not see how an operator tree computes.
+Define a transformation by its equivalence and condition, give numbered steps, and run them on a toy instance showing each intermediate result.
