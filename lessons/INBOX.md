@@ -14,6 +14,10 @@ Scope tags: `all`, `reports`, `coursework`, `academic-english`, `explaining`, `l
 
 ---
 
+## 2026-10-16 · course book · promoted → E10
+A chapter for an 18-page lecture filled 15 pages, as long as the two previous chapters together; the user asked why a summary is that long and asked for "compact phrases" that keep the necessary detail.
+Write a chapter in compact phrases (fragments, symbols, one-line bullets) instead of full prose; no roadmap, no reproduced code listing, no exam-question list that repeats the traps; a chapter stays well under the source's length.
+
 ## 2026-10-11 · explaining · promoted → E10
 Course books "should start from all of previous weeks" and stay "as short as possible without losing any of the important information".
 Every week from the first; complete content, each thing said once.
