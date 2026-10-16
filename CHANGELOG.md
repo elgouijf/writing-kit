@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- E10 rewritten (compress prose, not content); E15 (never write into the user's study document unasked); E16 (a course book is shorter than its sources, chapter by chapter, in words).
+- New tool `check_length.py`: each chapter's word share of its source, with a per-chapter cap.
+
 ## 1.0.0
 
 - First public version. Merges three pipelines: the lessons of an engineering internship report (119 lessons, a school's ID-tagged rules, a rewrite brief), the coursework rules of an exchange semester, and the explaining rules behind course books.

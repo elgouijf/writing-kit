@@ -11,7 +11,7 @@ A writing pipeline for Claude Code that makes deliverables read as a person wrot
 | `templates/report/` | The report working tree (cover, abstract, contents, lists, chapters, references, glossary, appendices) and `short.tex` for one or two pages; its `README.md` defines the tree and how the LaTeX is written. |
 | `templates/course-book/` | Course book: margin definitions of difficult terms, automatic glossary, definition/intuition/worked-example/trap boxes, formula sheet. |
 | `templates/profile.example.md` | Template for a private profile (identity, voice preferences, private sources) kept outside the repository. |
-| `tools/` | `check_style.py` (machine-writing patterns), `check_numbers.py` (every number traced to a source, or unchanged by a rewrite), `extract_annotations.py` (notes saved in a PDF), `body_pages.py` (page budget), `build_index.py`. |
+| `tools/` | `check_style.py` (machine-writing patterns), `check_numbers.py` (every number traced to a source, or unchanged by a rewrite), `extract_annotations.py` (notes saved in a PDF), `body_pages.py` (page budget), `check_length.py` (course-book chapters against their sources, in words), `build_index.py`. |
 | `lessons/INBOX.md` | Where new corrections land before they become rules. |
 
 ## Install

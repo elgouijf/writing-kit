@@ -14,6 +14,10 @@ Scope tags: `all`, `reports`, `coursework`, `academic-english`, `explaining`, `l
 
 ---
 
+## 2026-10-16 · course book · promoted → E16
+The user asked for a general check that a course book is shorter than its sources and each chapter shorter than its source by a factor depending on its importance, measured in a unit other than pages (the margin column and boxes inflate pages).
+Cap each chapter's word share of its source (default 50 %, lower for less important sources); check with tools/check_length.py.
+
 ## 2026-10-16 · course book · promoted → E15
 Two clarifications (TF-IDF log, word present in every document) were written into the course book unasked: "don't add things to the course book without telling me".
 Answer in chat; add to the user's study document only after asking.
