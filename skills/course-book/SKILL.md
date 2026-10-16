@@ -17,7 +17,7 @@ Fix the two `\input` paths at the top of `main.tex` (they must reach `templates/
 
 ## Each new lecture
 
-1. Write `chapters/week-NN.tex`: every derivation, table and rule of the slides, the background they assume and every clarification the user asked for, each said once and as briefly as it allows (E10). A new book starts at week 1, backfilling every past week.
+1. Write `chapters/week-NN.tex`: every derivation, table and rule of the slides, the background they assume and every clarification the user agreed to add (E15), each said once and as briefly as it allows (E10). A new book starts at week 1, backfilling every past week.
 2. Declare new terms in `glossary.tex`; `\term{key}` at first use in running text only, `\gls{key}` inside boxes, tables and figures.
 3. Add the `\input`, extend the formula sheet, update `\coverage` and `\updated`.
 4. Build, then render and look at every new page (X5):

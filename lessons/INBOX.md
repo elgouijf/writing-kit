@@ -14,6 +14,14 @@ Scope tags: `all`, `reports`, `coursework`, `academic-english`, `explaining`, `l
 
 ---
 
+## 2026-10-16 · course book · promoted → E15
+Two clarifications (TF-IDF log, word present in every document) were written into the course book unasked: "don't add things to the course book without telling me".
+Answer in chat; add to the user's study document only after asking.
+
+## 2026-10-16 · course book · promoted → E10 (revised)
+The compact rewrite cut week 3 from 15 to 7 pages but dropped worked-example arithmetic, four figures, a code listing and the intuition boxes; asked "are you losing detail?", the user chose to restore all of them.
+Compress prose, not content; check word share against the source and lost numbers with check_numbers before delivering.
+
 ## 2026-10-16 · course book · promoted → E10
 A chapter for an 18-page lecture filled 15 pages, as long as the two previous chapters together; the user asked why a summary is that long and asked for "compact phrases" that keep the necessary detail.
 Write a chapter in compact phrases (fragments, symbols, one-line bullets) instead of full prose; no roadmap, no reproduced code listing, no exam-question list that repeats the traps; a chapter stays well under the source's length.
